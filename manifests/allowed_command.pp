@@ -12,6 +12,7 @@
 #   [*require_password*]      - require user to give password, setting to false sets 'NOPASSWD:' (true)
 #   [*comment*]               - comment to add to the file
 #   [*allowed_env_variables*] - allowed list of env variables ([])
+#   [*require_exist*]         - Require the Group or User to exist.
 #
 # Example usage:
 #
@@ -40,7 +41,8 @@ define sudoers::allowed_command(
   $group            = undef,
   $require_password = true,
   $comment          = undef,
-  $allowed_env_variables = []
+  $allowed_env_variables = [],
+  $require_exist    = true,
 ) {
 
   if ($user == undef and $group == undef) {
@@ -57,11 +59,16 @@ define sudoers::allowed_command(
     default => "%${group}"
   }
 
-  $require_spec = $group ? {
-    undef   => $user ? { 'ALL' => undef, default => User[$user] },
-    default => Group[$group]
+  if $require_exist {
+    $require_spec = $group ? {
+      undef   => $user ? { 'ALL' => undef, default => User[$user] },
+      default => Group[$group]
+    }
   }
 
+  if $no_require {
+    $require_spec = undef
+  }
 
   file { "/etc/sudoers.d/${filename}":
     ensure  => file,
