@@ -66,10 +66,6 @@ define sudoers::allowed_command(
     }
   }
 
-  if $no_require {
-    $require_spec = undef
-  }
-
   file { "/etc/sudoers.d/${filename}":
     ensure  => file,
     content => validate(template('sudoers/allowed-command.erb'), '/usr/sbin/visudo -cq -f'),
