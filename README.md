@@ -2,6 +2,7 @@
 
 Puppet module for creating sudoers user specifications
 
+[![Build Status](https://travis-ci.org/phinze/puppet-sudoers.svg)](https://travis-ci.org/phinze/puppet-sudoers)
 
 ### Install
 
