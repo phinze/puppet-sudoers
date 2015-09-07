@@ -13,6 +13,7 @@
 #   [*comment*]               - comment to add to the file
 #   [*allowed_env_variables*] - allowed list of env variables ([])
 #   [*require_exist*]         - Require the Group or User to exist.
+#   [*no_tty*]                - remove default tty requirement (false)
 #
 # Example usage:
 #
@@ -43,6 +44,7 @@ define sudoers::allowed_command(
   $comment          = undef,
   $allowed_env_variables = [],
   $require_exist    = true,
+  $no_tty           = false
 ) {
 
   if ($user == undef and $group == undef) {
