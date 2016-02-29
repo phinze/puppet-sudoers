@@ -55,4 +55,5 @@ The `allowed_command` type takes the following options (with defaults in bracket
 [*comment*]               - comment to add to the file
 [*allowed_env_variables*] - allowed list of env variables ([])
 [*require_exist*]         - Require the Group or User to exist. Setting this to false for example is needed if the user groups come from Active Directory. (true)
+[*no_tty*]                - remove default tty requirement (false)
 ```
