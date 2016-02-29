@@ -1,8 +1,8 @@
 {
   "name": "phinze-sudoers",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Paul Hinze",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "summary": "A simple template to semantically manage allowed commands in sudoers.d",
   "source": "https://github.com/phinze/puppet-sudoers",
   "project_page": "https://forge.puppetlabs.com/phinze/sudoers",
