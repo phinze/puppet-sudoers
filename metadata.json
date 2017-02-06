@@ -1,6 +1,6 @@
 {
   "name": "phinze-sudoers",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Paul Hinze",
   "license": "MIT",
   "summary": "A simple template to semantically manage allowed commands in sudoers.d",
