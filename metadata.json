@@ -5,6 +5,7 @@
   "license": "MIT",
   "summary": "A simple template to semantically manage allowed commands in sudoers.d",
   "source": "https://github.com/phinze/puppet-sudoers",
+  "dependencies": [],  
   "project_page": "https://forge.puppetlabs.com/phinze/sudoers",
   "issues_url": "https://github.com/phinze/puppet-sudoers/issues",
   "tags": ["sudo", "sudoers"]
