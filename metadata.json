@@ -8,5 +8,7 @@
   "dependencies": [],  
   "project_page": "https://forge.puppetlabs.com/phinze/sudoers",
   "issues_url": "https://github.com/phinze/puppet-sudoers/issues",
-  "tags": ["sudo", "sudoers"]
+  "tags": ["sudo", "sudoers"],
+  "dependencies": [
+  ]
 }
